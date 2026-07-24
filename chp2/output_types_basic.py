@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from agents import Agent
 
 class ResearchPlanModel(BaseModel):
-    tasks: List[str]
+    tasks: list[str]
     """A list of tasks to perform for research."""
 
 instructions = """
@@ -15,5 +15,3 @@ You are a research planning assistant.
 """
 
 agent = Agent(name="Research Planner", instructions=instructions, output_type=ResearchPlanModel)
-
-#EXAMPLE OUTPUT
